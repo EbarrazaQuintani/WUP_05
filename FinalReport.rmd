@@ -34,7 +34,7 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
 ```{r}
-dd2 <- males %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+dd2 <- females %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
 
 # the group_by followed by summarize(count=n())
@@ -48,12 +48,20 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
   
-Looking at the prcnt* 100 graph it shows that female who have aids,  around 60%  of those people who took the drugs had gotten aids. While those who did not have it, about 52% of those who did not have aids and took the placebo had not contracted aids. This shows that females who took the drug contracted aids at a higher rate than those who took the placebo which means the drug is not effective at stopping females from contracting aids.
-
-
+Looking at the prcnt* 100 graph it shows that female who have aids,  around 60%  of those people who took the drugs had gotten aids. While those who did not have it, about 52% of those who did not have aids and took the placebo had not contracted aids. The chances of contracting aids for those who took the drug is about three-two and are more liekly to contract aids one and a half times more.
+  
+    
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=females)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Looking at the numerical results show that those who had contracted aids while taking the drugs was 58.82 out of 100. The odds are 59.0-41.0 of contracting aids while taking the drug to prevent contracting aids.
 
 ## Inferential Results
 
