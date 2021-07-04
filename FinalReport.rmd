@@ -79,3 +79,5 @@ Fisher's exact test for count data had a null hypothesis ratio is 1. Then it sho
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+When we look at what it wanted us to do, it ask to show the effectiveness of a drug that can help aid females in not contracting aids. First we did the graphical results which gave us a visual of the results  which showed that the drug was not effective. Then we looked a the numerical descriptive results which then gave us a look at the odds of a female getting aids is 3-2 when it comes to the drugs effectiveness. Lastly we look at fisher's exact test which showed up that we could reject the null hypothesis since the p-value was a small number.
